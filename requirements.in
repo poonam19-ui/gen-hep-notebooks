@@ -36,7 +36,10 @@ h5py               # CaloChallenge HDF5 (capstone Dataset 2). Also pulled by jet
                    # compiled extras (torch-scatter/sparse) come from the GNN env if a layer needs them
 
 # --- our tooling ---
-cadence-edu        # our Jupyter plugin (autoregister + scaffold). Confirm pip-vs-git + pin a version.
+# TEMPORARY: the 0.3.0 TestPyPI build under active development. Install with:
+#   pip install --extra-index-url https://test.pypi.org/simple/ cadence-edu==0.3.0
+# Swap to a real PyPI release before the course.
+cadence-edu==0.3.0   # our Jupyter plugin (autoregister + scaffold + submission API)
 
 # --- pin ---
 numpy<2            # HEP stack requires numpy 1.x; resolver lands on 1.26.4

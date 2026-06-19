@@ -62,5 +62,13 @@ dependencies:
       - geomloss         # Sinkhorn / optimal-transport losses
       # (geomloss is much faster with pykeops; add `pykeops` here if you want it)
 
+      # cadence-edu — our Jupyter plugin (%load_ext cadence, autoregister/scaffold,
+      # the submission API). REQUIRED by every notebook. TEMPORARY: pinned to the
+      # 0.3.0 TestPyPI build under active development; swap to a real PyPI release
+      # before the course. The extra-index lets pip find it on TestPyPI while deps
+      # still resolve from regular PyPI.
+      - --extra-index-url https://test.pypi.org/simple/
+      - cadence-edu==0.3.0
+
 variables:
   LD_LIBRARY_PATH: "'$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/'"
