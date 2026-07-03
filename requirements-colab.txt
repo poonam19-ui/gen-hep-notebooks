@@ -1,0 +1,14 @@
+# Extra packages for running the ML4HEP notebooks in Google Colab
+# (the fallback when BinderHub is unavailable).
+#
+# Colab already ships torch, numpy, scipy, matplotlib, h5py and scikit-learn,
+# so this only adds what's missing. Install with one line:
+#
+#     !pip install -r requirements-colab.txt
+#
+# The --extra-index-url lets pip find cadence-edu on TestPyPI while everything
+# else resolves from regular PyPI.
+--extra-index-url https://test.pypi.org/simple/
+diffusers
+jetnet
+cadence-edu==0.3.0
